@@ -44,7 +44,7 @@ function PasOn() {
 		}else if(message.comand === "copy"){
 			
 	
-		}else if (message.comand === "reset") {
+		}else if (message.comand === "off") {
 			PasOn()	
 		}
 	});
