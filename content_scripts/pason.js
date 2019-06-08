@@ -1,3 +1,4 @@
+
 let inp= document.querySelectorAll('input');
 
 function PasOff() {
@@ -30,4 +31,23 @@ function PasOn() {
 	}	
 }
 	
-PasOff();
+
+
+(function () {	
+	browser.runtime.onMessage.addListener((message) => {
+
+		console.log(message.comand)
+		if (message.comand === "on") {
+	
+			PasOff()
+	
+		}else if(message.comand === "copy"){
+			
+	
+		}else if (message.comand === "reset") {
+			PasOn()	
+		}
+	});
+
+
+})();
